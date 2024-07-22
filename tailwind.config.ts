@@ -13,6 +13,9 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      bgGradient180: {
+        "background-image": "linear-gradient(180deg, #F0EFFF 0%, #E4E2FF 100%)",
+      },
     },
   },
   plugins: [],
