@@ -56,9 +56,10 @@ const data = [
 
 const Slider = () => {
     const [images] = useState(data);
-    const [startIndex, setStartIndex] = useState<number>(0);
+    const [startIndex, setStartIndex] = useState(0);
     const visibleItems = 3;
-    const slideWidth = Math.round(100 / visibleItems) + '%';
+    const slideWidth = Number(Math.round(100 / visibleItems) + '%');
+    // console.log(typeof slideWidth)
     const autoSlideInterval = 3000;
 
     // Handle infinite looping
