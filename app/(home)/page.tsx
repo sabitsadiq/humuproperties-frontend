@@ -1,6 +1,7 @@
 import Discover from "../components/Discover";
 import Hero from "../components/Hero";
 import OneplaceTorental from "../components/OneplaceTorental";
+import StartPromote from "../components/StartPromote";
 import Support from "../components/Support";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <Discover />
       <OneplaceTorental />
       <Support />
+      <StartPromote />
     </main>
   );
 }
