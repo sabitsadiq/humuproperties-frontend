@@ -56,10 +56,10 @@ const data = [
 
 const Slider = () => {
     const [images] = useState(data);
-    const [startIndex, setStartIndex] = useState(0); // Track starting index
+    const [startIndex, setStartIndex] = useState<number>(0);
     const visibleItems = 3;
-    const slideWidth = Math.round(100 / visibleItems) + '%'; // Adjust width as needed
-    const autoSlideInterval = 3000; // Interval for auto-sliding in milliseconds
+    const slideWidth = Math.round(100 / visibleItems) + '%';
+    const autoSlideInterval = 3000;
 
     // Handle infinite looping
     useEffect(() => {
