@@ -5,13 +5,13 @@ const Hero = () => {
     return (
         <section className='flex flex-col md:flex-row gap-9 w-11/12 mx-auto  max-w-[1440px] '>
 
-            <div className='block mt-32 xl:max-w-[690px] object-contain w-full md:w-[700px] md:h-[720px]'>
+            <div className=' border border-red-500 mt-32 xl:max-w-[690px] object-contain w-full md:w-[700px] md:h-[720px]'>
                 <Image
                     src="/images/livingRoom.png"
                     alt='livingRoom'
                     width={700}
                     height={700}
-                    className='relative z-10 object-cover rounded-lg '
+                    className='object-cover rounded-lg '
                 />
                 {/* <div className='bg-white relative z-30 -translate-y-36 rounded-lg w-[355px] flex items-center h-[104px] md:hidden px-3 py-2 mt-[90px]'>
                     <div className='flex gap-2 items-center'>
