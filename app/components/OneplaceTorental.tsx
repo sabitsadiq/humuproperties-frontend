@@ -30,7 +30,7 @@ const OneplaceTorental = () => {
 
     console.log(showComponent)
 
-    const ComponentMap = {
+    const ComponentMap: { [key: string]: React.ComponentType } = {
         showGlobalExposure: GlobalExposure,
         showCalenderSync: CalenderSync,
         showManagementDashboard: ManagementDashboard,
