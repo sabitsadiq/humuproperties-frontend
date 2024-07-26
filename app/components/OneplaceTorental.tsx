@@ -30,7 +30,7 @@ const OneplaceTorental = () => {
 
                 </div>
                 <div className='w-full mt-4 md:mt-0 md:w-1/2'>
-                    <div className='w-full bg-white rounded-lg pt-10 shadow-md'>
+                    <div className='w-full relative z-0 bg-white rounded-lg pt-10 shadow-md'>
                         <div className='mx-auto md:w-3/5 flex justify-center flex-col items-center'>
                             <h2 className='font-semibold text-[28px] leading-[40.46px'>Global exposure</h2>
                             <p className='font-normal text-xl leading-[28.9px] text-[#141414]/50 w-3/4 my-2 text-center'>We can list your property on over 30 channels, including Airbnb, Expedia, and Booking.com.
@@ -40,7 +40,7 @@ const OneplaceTorental = () => {
                         </div>
                         <div className='relative flex justify-center '>
                             <div className='h-[400px] w-[400px] flex items-center justify-center'>
-                                <Image src="/images/globe.png" className='w-[400px] h-[400px]' width={400} height={400} alt='globe' />
+                                <Image src="/images/glorb.png" className='w-[400px] h-[400px]' width={400} height={400} alt='globe' />
                             </div>
                             <div className="absolute bottom-2 left-0 flex justify-center w-full h-1/2">
                                 <div className='w-4/5 md:w-1/2 h-full'>

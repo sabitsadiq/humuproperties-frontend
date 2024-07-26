@@ -6,7 +6,7 @@ import { FiMenu } from 'react-icons/fi';
 const Navbar = () => {
     const router = useRouter()
     return (
-        <div className='fixed z-50 top-0 left-0 shadow-sm w-full h-20 bg-gradient-180 flex justify-center'>
+        <div className='fixed z-[1000] top-0 left-0 shadow-sm w-full h-20 bg-gradient-180 flex justify-center'>
             <div className='flex items-center p-2  justify-between w-11/12 max-w-[1440px]'>
 
                 <div className='text-2xl font-normal leading-[34.68px] text-black'><span className='text-blue-500'>Humu</span>properties</div>

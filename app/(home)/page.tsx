@@ -6,7 +6,7 @@ import Support from "../components/Support";
 
 export default function Home() {
   return (
-    <main className="hero-bg w-full h-full">
+    <main className="relative z-0 hero-bg w-full h-full">
       <Hero />
       <Discover />
       <OneplaceTorental />
