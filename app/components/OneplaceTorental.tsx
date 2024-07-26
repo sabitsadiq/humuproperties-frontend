@@ -1,7 +1,45 @@
-import React from 'react'
-import Image from 'next/image'
+"use client";
+import React, { useState } from 'react';
+import GlobalExposure from './GlobalExposure';
+import CalenderSync from './CalenderSync';
+import ManagementDashboard from './ManagementDashboard';
+import DirectBooking from './DirectBooking';
+import GuestMessaging from './GuestMessaging';
+import SmartPricing from './SmartPricing';
 
 const OneplaceTorental = () => {
+    const option = {
+        showGlobalExposure: true,
+        showCalenderSync: false,
+        showManagementDashboard: false,
+        showDirectBooking: false,
+        showGuestMessaging: false,
+        showSmartPricing: false
+    }
+    const [showComponent, setShowComponent] = useState<object>(option);
+
+    const handleShowComponent = (id: string) => {
+        setShowComponent((prev) => ({
+            ...Object.keys(prev).reduce((acc, key) => ({
+                ...acc,
+                [key]: key === id
+            }), {})
+        }));
+    };
+
+
+    console.log(showComponent)
+
+    const ComponentMap = {
+        showGlobalExposure: GlobalExposure,
+        showCalenderSync: CalenderSync,
+        showManagementDashboard: ManagementDashboard,
+        showDirectBooking: DirectBooking,
+        showGuestMessaging: GuestMessaging,
+        showSmartPricing: SmartPricing
+
+    };
+
     return (
         <section className='flex flex-col gap-9 pt-12 pb-10 w-11/12 mx-auto  max-w-[1440px]'>
             <div className='mx-auto md:w-1/2'>
@@ -13,47 +51,29 @@ const OneplaceTorental = () => {
                 <div className='md:w-1/2 text-[#120B59]  text-lg md:text-[28px] leading-[40.46px]'>
                     <div className='flex flex-col gap-4 md:w-4/5'>
                         <div className='flex gap-4 w-full'>
-                            <button className='bg-[#F7D10B] w-full shadow-md rounded-lg p-1 md:p-[10px]'>Global exposure</button>
-                            <button className='bg-white shadow-sm rounded-lg p-1 md:p-[10px] w-full'>Calender sync</button>
+                            <button className='bg-[#F7D10B] w-full shadow-md rounded-lg p-1 md:p-[10px]' onClick={() => handleShowComponent("showGlobalExposure")}>Global exposure</button>
+                            <button className='bg-white shadow-sm rounded-lg p-1 md:p-[10px] w-full' onClick={() => handleShowComponent("showCalenderSync")}>Calender sync</button>
                         </div>
                         <div className='w-full flex justify-center'>
-                            <button className='bg-white shadow-sm rounded-lg p-1 md:p-[10px]'>Management dashboard</button>
+                            <button className='bg-white shadow-sm rounded-lg p-1 md:p-[10px]' onClick={() => handleShowComponent("showManagementDashboard")}>Management dashboard</button>
                         </div>
                         <div className='flex gap-4 w-full'>
-                            <button className='bg-white w-full shadow-sm rounded-lg p-1 md:p-[10px]'>Direct booking</button>
-                            <button className='bg-white rounded-lg shadow-sm p-1 md:p-[10px] w-full'>Guest messaging</button>
+                            <button className='bg-white w-full shadow-sm rounded-lg p-1 md:p-[10px]' onClick={() => handleShowComponent("showDirectBooking")}>Direct booking</button>
+                            <button className='bg-white rounded-lg shadow-sm p-1 md:p-[10px] w-full' onClick={() => handleShowComponent("showGuestMessaging")}>Guest messaging</button>
                         </div>
                         <div className='w-full flex justify-center'>
-                            <button className='bg-white rounded-lg shadow-sm p-1 md:p-[10px] w-3/5'>Smart pricing</button>
+                            <button className='bg-white rounded-lg shadow-sm p-1 md:p-[10px] w-3/5' onClick={() => handleShowComponent("showSmartPricing")}>Smart pricing</button>
                         </div>
                     </div>
 
                 </div>
                 <div className='w-full mt-4 md:mt-0 md:w-1/2'>
-                    <div className='w-full relative z-0 bg-white rounded-lg pt-10 shadow-md'>
-                        <div className='mx-auto md:w-3/5 flex justify-center flex-col items-center'>
-                            <h2 className='font-semibold text-[28px] leading-[40.46px'>Global exposure</h2>
-                            <p className='font-normal text-xl leading-[28.9px] text-[#141414]/50 w-3/4 my-2 text-center'>We can list your property on over 30 channels, including Airbnb, Expedia, and Booking.com.
-                                Find out more
-                            </p>
-                            <button className="bg-[#F7D10B] p-2 rounded-lg w-1/2">Find out more</button>
-                        </div>
-                        <div className='relative flex justify-center '>
-                            <div className='h-[400px] w-[400px] flex items-center justify-center'>
-                                <Image src="/images/glorb.png" className='w-[400px] h-[400px]' width={400} height={400} alt='globe' />
-                            </div>
-                            <div className="absolute bottom-2 left-0 flex justify-center w-full h-1/2">
-                                <div className='w-4/5 md:w-1/2 h-full'>
-                                    <div className='flex w-full justify-between'>
-                                        <Image src="/images/airbnb.png" width={97} height={90} alt='airbnb' />
-                                        <Image src="/images/flight.png" width={97} height={90} alt='airbnb' />
-                                    </div>
-                                    <div className='flex justify-center w-full'>
-                                        <Image src="/images/sunshine.png" width={97} height={90} alt='airbnb' />
-                                    </div>
-                                </div></div>
-                        </div>
-                    </div>
+                    {Object.entries(showComponent)
+                        .filter(([, isActive]) => isActive)
+                        .map(([key]) => {
+                            const Component = ComponentMap[key];
+                            return <Component key={key} />;
+                        })}
                 </div>
             </div>
         </section>

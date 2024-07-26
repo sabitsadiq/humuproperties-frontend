@@ -11,7 +11,7 @@ const Hero = () => {
                     alt='livingRoom'
                     width={700}
                     height={700}
-                    className='object-cover rounded-lg '
+                    className='object-cover rounded-lg'
                 />
             </div>
             <div className='md:mt-32 '>
