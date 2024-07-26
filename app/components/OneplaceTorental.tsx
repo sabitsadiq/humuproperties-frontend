@@ -50,16 +50,16 @@ const OneplaceTorental = () => {
                 <div className='md:w-1/2 text-[#120B59]  text-lg md:text-[28px] leading-[40.46px]'>
                     <div className='flex flex-col gap-4 md:w-4/5'>
                         <div className='flex gap-4 w-full'>
-                            <button className={`${showComponent.showGlobalExposure ? "bg-[#F7D10B] shadow-md" : "bg-white shadow-sm"} w-full  rounded-lg p-1 md:p-[10px]`} onClick={() => handleShowComponent("showGlobalExposure")}>Global exposure</button>
-                            <button className={`${showComponent.showCalenderSync ? "bg-[#1FEBC6] shadow-md" : "bg-white shadow-sm"}bg-white shadow-sm rounded-lg p-1 md:p-[10px] w-full`} onClick={() => handleShowComponent("showCalenderSync")}>Calender sync</button>
+                            <button className={`${showComponent?.showGlobalExposure ? "bg-[#F7D10B] shadow-md" : "bg-white shadow-sm"} w-full  rounded-lg p-1 md:p-[10px]`} onClick={() => handleShowComponent("showGlobalExposure")}>Global exposure</button>
+                            <button className={`${showComponent?.showCalenderSync ? "bg-[#1FEBC6] shadow-md" : "bg-white shadow-sm"}bg-white shadow-sm rounded-lg p-1 md:p-[10px] w-full`} onClick={() => handleShowComponent("showCalenderSync")}>Calender sync</button>
                         </div>
                         <div className='w-full flex justify-center'>
-                            <button className={`${showComponent.showManagementDashboard ? "bg-[#91E768] shadow-md" : "bg-white shadow-sm"} rounded-lg p-1 md:p-[10px]`}
+                            <button className={`${showComponent?.showManagementDashboard ? "bg-[#91E768] shadow-md" : "bg-white shadow-sm"} rounded-lg p-1 md:p-[10px]`}
                                 onClick={() => handleShowComponent("showManagementDashboard")}
                             >Management dashboard</button>
                         </div>
                         <div className='flex gap-4 w-full'>
-                            <button className={`${showComponent.showDirectBooking ? "bg-[#1DDBE7] shadow-md" : "bg-white shadow-sm"} w-full  rounded-lg p-1 md:p-[10px]`} onClick={() => handleShowComponent("showDirectBooking")}>Direct booking</button>
+                            <button className={`${showComponent?.showDirectBooking ? "bg-[#1DDBE7] shadow-md" : "bg-white shadow-sm"} w-full  rounded-lg p-1 md:p-[10px]`} onClick={() => handleShowComponent("showDirectBooking")}>Direct booking</button>
                             <button className='bg-white rounded-lg shadow-sm p-1 md:p-[10px] w-full'
                             // onClick={() => handleShowComponent("showGuestMessaging")}
                             >Guest messaging</button>
