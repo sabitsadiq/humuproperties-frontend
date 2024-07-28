@@ -1,8 +1,12 @@
+
 import type { Metadata } from "next";
 import { Jost } from "next/font/google";
 import "../globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { ReduxProvider } from "../redux/provider";
+// import { store } from "../redux/store"
+// import { Provider } from 'react-redux'
 
 const inter = Jost({ subsets: ["latin"] });
 
@@ -19,9 +23,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} `}>
-        <Navbar />
-        {children}
-        <Footer />
+        <ReduxProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </ReduxProvider>
       </body>
     </html>
   );

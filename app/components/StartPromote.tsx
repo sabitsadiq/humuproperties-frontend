@@ -1,5 +1,6 @@
 import React from 'react'
 import Slider from './Slider'
+import Carousel from './NewSlider'
 
 const StartPromote = () => {
     return (
@@ -16,7 +17,8 @@ const StartPromote = () => {
 
                     </div>
                 </div>
-                <Slider />
+                {/* <Slider /> */}
+                <Carousel />
             </div>
 
         </section>
