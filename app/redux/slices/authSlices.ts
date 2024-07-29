@@ -9,7 +9,7 @@ const initialState: authType = {
 };
 
 export const authSlice = createSlice({
-  name: "authSlice",
+  name: "auth",
   initialState,
   reducers: {
     setOpenSidebar: (state, action) => {
@@ -17,6 +17,7 @@ export const authSlice = createSlice({
     },
   },
 });
+// console.log(isSidebarOpen);
 
 export const { setOpenSidebar } = authSlice.actions;
 export default authSlice.reducer;

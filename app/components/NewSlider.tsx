@@ -1,6 +1,47 @@
 "use client";
 import React, { useState, useEffect, useRef } from 'react';
 import './Carousel2.css'; // Assuming your CSS file is named Carousel.css
+import Image from 'next/image';
+import { IoIosArrowRoundBack, IoIosArrowRoundForward } from 'react-icons/io';
+
+const slicedImages = [
+    {
+        id: 1,
+        image: '/images/racheal.png',
+        name: 'Racheal Gear',
+        text: 'Starting and growing a rental business can be a complex process. We’re at hand to help you build and maintain a successful rental business.'
+    },
+    {
+        id: 2,
+        image: '/images/racheal.png',
+        name: 'Alex Felix',
+        text: 'Starting and growing a rental business can be a complex process. We’re at hand to help you build and maintain a successful rental business.'
+    },
+    {
+        id: 3,
+        image: '/images/racheal.png',
+        name: 'John Doe',
+        text: 'Starting and growing a rental business can be a complex process. We’re at hand to help you build and maintain a successful rental business.'
+    },
+    {
+        id: 4,
+        image: '/images/racheal.png',
+        name: 'Racheal Gear',
+        text: 'Starting and growing a rental business can be a complex process. We’re at hand to help you build and maintain a successful rental business.'
+    },
+    {
+        id: 5,
+        image: '/images/racheal.png',
+        name: 'Alex Felix',
+        text: 'Starting and growing a rental business can be a complex process. We’re at hand to help you build and maintain a successful rental business.'
+    },
+    {
+        id: 6,
+        image: '/images/racheal.png',
+        name: 'John Doe',
+        text: 'Starting and growing a rental business can be a complex process. We’re at hand to help you build and maintain a successful rental business.'
+    }
+];
 
 const Carousel = () => {
     const carouselRef = useRef<any>(null);
@@ -86,21 +127,37 @@ const Carousel = () => {
     };
 
     return (
-        <div className="wrapper">
-            <i id="left" className="fa-solid fa-angle-left" onClick={handleLeftClick} />
-            <ul ref={carouselRef} className="carousel" onScroll={handleInfiniteScroll}>
-                {/* Map over your actual data to render cards */}
-                {[1, 2, 3, 4, 5, 6].map((item) => (
-                    <li key={item} className="card">
-                        <div className="img">
-                            <img src="" alt="" draggable="false" />
-                        </div>
-                        <h2>{item} Blanche Pearson</h2>
-                        <span>Sales Manager</span>
-                    </li>
-                ))}
-            </ul>
-            <i id="right" className="fa-solid fa-angle-right" onClick={handleRightClick} />
+        <div className="wrapper py-10">
+            { }
+            <div className='flex items-center justify-center absolute rounded-lg w-10 h-10 sm:w-[54px] sm:h-[60px] bg-white shadow-lg top-1/2 -translate-y-1/2 -left-2 sm:-left-4 cursor-pointer' onClick={handleLeftClick}>
+                <IoIosArrowRoundBack size={32} />
+
+            </div>
+            <div ref={carouselRef} className="carousel" onScroll={handleInfiniteScroll}>
+                {slicedImages.map((item: any) => {
+                    const { id, name, image, text } = item;
+                    return (
+
+                        <article
+                            className={`bg-[#FAFAFA] shadow-sm flex flex-col p-10 rounded-lg gap-2 items-center card`}
+                            key={id}
+                        >
+                            <Image src={image} className="person-img" width={70} height={70} alt="img" />
+                            <h5 className="font-bold text-2xl text-[#000000] leading-[34.68px]">{name}</h5>
+                            <p className="text-center font-normal w-11/12 text-xl leading-[28.9px] opacity-50 text-[#141414]">
+                                {text}
+                            </p>
+                        </article>
+
+                    )
+                })
+                }
+            </div>
+            <div className='flex items-center justify-center absolute rounded-lg w-10 h-10 sm:w-[54px] sm:h-[60px] bg-white shadow-lg top-1/2 -translate-y-1/2 -right-2 sm:-right-4 cursor-pointer' onClick={handleRightClick}>
+                <IoIosArrowRoundForward size={32} />
+
+            </div>
+
         </div>
     )
 }
