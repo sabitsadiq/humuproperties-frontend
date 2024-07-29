@@ -11,7 +11,7 @@ import { useRouter } from "next/navigation";
 const MobileNavbar = () => {
     const router = useRouter()
     const { isSidebarOpen } = useSelector((state: RootState) => state.auth);
-    const mobileMenuRef = useRef<any>(null);
+    const mobileMenuRef = useRef<HTMLDivElement | null>(null);
     const dispatch = useDispatch();
 
 
