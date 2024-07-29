@@ -11,7 +11,7 @@ import { useRouter } from "next/navigation";
 const MobileNavbar = () => {
     const router = useRouter()
     const { isSidebarOpen } = useSelector((state: RootState) => state.auth);
-    const mobileMenuRef = useRef<HTMLDivElement | null>(null);
+    const mobileMenuRef = useRef<HTMLDivElement | undefined>(null);
     const dispatch = useDispatch();
 
 
@@ -51,7 +51,7 @@ const MobileNavbar = () => {
                             </div>
 
                             <div className='-mt-10 h-full px-5'>
-                                <div className='flex flex-col justify-between mt-10 gap-10'>
+                                <div className='flex flex-col justify-between mt-28 gap-10'>
                                     <div className='cursor-pointer'>How it works</div>
                                     <div className='cursor-pointer'>Features</div>
                                     <div className='cursor-pointer'>Pricing</div>
