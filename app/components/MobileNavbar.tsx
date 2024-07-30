@@ -11,7 +11,7 @@ import { useRouter } from "next/navigation";
 const MobileNavbar = () => {
     const router = useRouter()
     const { isSidebarOpen } = useSelector((state: RootState) => state.auth);
-    const mobileMenuRef = useRef<HTMLDivElement | undefined>(null);
+    const mobileMenuRef = useRef<HTMLDivElement>(null);
     const dispatch = useDispatch();
 
 
@@ -33,7 +33,7 @@ const MobileNavbar = () => {
             >
                 {(ref) => (
                     <div
-                        ref={(node) => (mobileMenuRef.current = node)}
+                        ref={mobileMenuRef}
                         className={clsx(
                             "absolute top-0 z-50 lg:hidden w-full h-full bg-black/40 transition-all duration-700 transform ",
                             isSidebarOpen ? "translate-x-0" : "translate-x-full"
