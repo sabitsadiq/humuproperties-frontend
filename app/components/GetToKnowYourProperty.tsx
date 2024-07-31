@@ -1,16 +1,18 @@
 import React from 'react'
+import useShowContainer from '../hooks/useShowContainer'
 
 const GetToKnowYourProperty = () => {
+    const isVisible = useShowContainer()
     return (
-        <div className='w-11/12 pb-20'>
-            <div className='flex flex-col md:flex-row gap-3 w-full mt-10'>
-                <div className='text-[#141414] flex flex-col gap-3 w-full md:w-[45%]'>
+        <div className='w-11/12 pb-20 overflow-hidden'>
+            <div className={`${isVisible ? "flex flex-col lg:flex-row gap-3 w-full md:mt-10 scroll-smooth translate-all delay-100 transition-transform opacity-100 translate-y-0" : "opacity-0 delay-75 blur-0 translate-y-full "} `}>
+                <div className='text-[#141414] flex flex-col gap-3 w-full lg:w-[45%]'>
                     <h2 className='font-semibold text-[32px] leadng-[46.24px]'>Getting to know your property.</h2>
                     <p className='opacity-80  text-2xl leading-[34.68px] font-normal'>In just one season our bookings have increased by over 50% with Humushop</p>
 
                 </div>
                 <div className='flex md:justify-end w-full'>
-                    <div className='py-10 px-[75 flex flex-col gap-3 w-full md:w-4/5'>
+                    <div className='pb-10 px-[75 flex flex-col gap-3 w-full mx-auto md:w-4/5'>
                         <h2 className='font-semibold text-[28px] leading-[40.46px] text-[#141414] opacity-70'>What space will guest have?</h2>
                         <div className='flex md:gap-20 flex-col-reverse md:flex-row justify-between border border-[#120B59] rounded-[12px] w-full p-[15px] md:items-center'>
                             <div className=''>

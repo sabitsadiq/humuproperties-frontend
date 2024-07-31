@@ -5,13 +5,13 @@ const Hero = () => {
     return (
         <section className='flex flex-col md:flex-row gap-9 w-11/12 mx-auto  max-w-[1440px] '>
 
-            <div className='mt-32 xl:max-w-[690px] object-contain w-full md:w-[700px] md:h-[720px]'>
+            <div className='mt-32 xl:max-w-[690px] object-contain w-full md:w-[700px] md:h-[720px] min-h-full'>
                 <Image
                     src="/images/living.svg"
                     alt='livingRoom'
                     width={700}
                     height={700}
-                    className='object-cover rounded-lg'
+                    className='object-cover w-full h-full rounded-lg'
                 />
             </div>
             <div className='md:mt-32 '>
@@ -20,7 +20,7 @@ const Hero = () => {
                     <p className='text-2xl font-normal max-w-[580px] leading-[34.68px] mt-3 mb-6 opacity-50'>Humuproperties is a one-stop shop to streamline your vacation rental property listings, bookings, payments, and more.</p>
                     <button
                         type="button"
-                        className="w-[10rem] h-10 bg-[#120B59] hover:text-[#120B59] hover:bg-transparent hover:border border-[#120B59] rounded-lg text-white"
+                        className="w-[10rem] h-10 bg-[#120B59] hover:text-[#120B59] hover:bg-transparent translate-all hover:border border-[#120B59] rounded-lg text-white"
                     >Sign up for free</button>
                 </div>
 

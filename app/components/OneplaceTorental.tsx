@@ -46,20 +46,20 @@ const OneplaceTorental = () => {
                 <p className='font-normal mx-auto w-4/5  text-[#141414]/50 text-2xl text-center'>Everything you need to host your vacation rental property.</p>
 
             </div>
-            <div className='w-full flex flex-col md:flex-row mt-12'>
-                <div className='md:w-1/2 text-[#120B59]  text-lg md:text-[28px] leading-[40.46px]'>
-                    <div className='flex flex-col gap-4 md:w-4/5'>
+            <div className='w-full flex flex-col gap- lg:flex-row mt-12'>
+                <div className='lg:w-1/2 text-[#120B59]  text-lg md:text-[28px] leading-[40.46px]'>
+                    <div className='flex flex-col gap-4 mx-auto md:w-4/5'>
                         <div className='flex gap-4 w-full'>
-                            <button className={`${(showComponent as any).showGlobalExposure ? "bg-[#F7D10B] shadow-md" : "bg-white shadow-sm"} w-full  rounded-lg p-1 md:p-[10px]`} onClick={() => handleShowComponent("showGlobalExposure")}>Global exposure</button>
-                            <button className={`${(showComponent as any).showCalenderSync ? "bg-[#1FEBC6] shadow-md" : "bg-white shadow-sm"}bg-white shadow-sm rounded-lg p-1 md:p-[10px] w-full`} onClick={() => handleShowComponent("showCalenderSync")}>Calender sync</button>
+                            <button className={`${(showComponent as any).showGlobalExposure ? "bg-[#F7D10B] shadow-md" : "bg-white shadow-sm"} w-full  hover:bg-[#F7D10B] transition-all rounded-lg p-1 md:p-[10px]`} onClick={() => handleShowComponent("showGlobalExposure")}>Global exposure</button>
+                            <button className={`${(showComponent as any).showCalenderSync ? "bg-[#1FEBC6] shadow-md" : "bg-white shadow-sm"} hover:bg-[#1FEBC6] transition-all shadow-sm rounded-lg p-1 md:p-[10px] w-full`} onClick={() => handleShowComponent("showCalenderSync")}>Calender sync</button>
                         </div>
                         <div className='w-full flex justify-center'>
-                            <button className={`${(showComponent as any).showManagementDashboard ? "bg-[#91E768] shadow-md" : "bg-white shadow-sm"} rounded-lg p-1 md:p-[10px]`}
+                            <button className={`${(showComponent as any).showManagementDashboard ? "bg-[#91E768] shadow-md" : "bg-white shadow-sm"} hover:bg-[#91E768] transition-all rounded-lg p-1 md:p-[10px]`}
                                 onClick={() => handleShowComponent("showManagementDashboard")}
                             >Management dashboard</button>
                         </div>
                         <div className='flex gap-4 w-full'>
-                            <button className={`${(showComponent as any)?.showDirectBooking ? "bg-[#1DDBE7] shadow-md" : "bg-white shadow-sm"} w-full  rounded-lg p-1 md:p-[10px]`} onClick={() => handleShowComponent("showDirectBooking")}>Direct booking</button>
+                            <button className={`${(showComponent as any)?.showDirectBooking ? "bg-[#1DDBE7] shadow-md" : "bg-white shadow-sm"} hover:bg-[#1DDBE7] transition-all w-full  rounded-lg p-1 md:p-[10px]`} onClick={() => handleShowComponent("showDirectBooking")}>Direct booking</button>
                             <button className='bg-white rounded-lg shadow-sm p-1 md:p-[10px] w-full'
                             // onClick={() => handleShowComponent("showGuestMessaging")}
                             >Guest messaging</button>
@@ -72,7 +72,7 @@ const OneplaceTorental = () => {
                     </div>
 
                 </div>
-                <div className='w-full mt-4 md:mt-0 md:w-1/2'>
+                <div className='w-full mt-4 md:mt-10 lg:mt-0 md:w-4/5 mx-auto lg:w-1/2'>
                     {Object.entries(showComponent)
                         .filter(([, isActive]) => isActive)
                         .map(([key]) => {

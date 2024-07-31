@@ -9,13 +9,13 @@ const GetStarted = ({ handleNextTab }: any) => {
                 <Image src="/images/getStartedImg.png" width="1237" height={162}
                     className='w-full h-full rounded-lg ' alt='get-started-pic' />
             </div>
-            <div className='flex flex-col md:flex-row gap-3 w-full mt-10 md:mt-20'>
-                <div className='text-[#141414] flex flex-col gap-3 w-full md:w-[45%]'>
+            <div className='flex flex-col lg:flex-row gap-3 w-full mt-10 md:mt-20'>
+                <div className='text-[#141414] flex flex-col gap-3 w-full lg:w-[45%]'>
                     <h2 className='font-semibold text-[32px] leadng-[46.24px]'>Unlock the potential of your vacation rental</h2>
                     <p className='opacity-80  text-2xl leading-[34.68px] font-normal'>In just one season our bookings have increased by over 50% with Humushop</p>
-                    <button className='hidden md:block rounded-lg p-3 bg-[#120B59] text-white text-lg leading-[26.01px] text-center w-full md:w-3/4' onClick={handleNextTab}>Continue</button>
+                    <button className='hidden md:block rounded-lg md:ml-2 p-3 bg-[#120B59] text-white text-lg leading-[26.01px] text-center w-full md:w-1/3 lg:w-3/5 transition delay-150 hover:scale-105 duration-300 ease-in-out' onClick={handleNextTab}>Continue</button>
                 </div>
-                <div className='bg-white rounded-lg shadow-md mt-4 md:mt-0'>
+                <div className='bg-white rounded-lg shadow-md mt-4 lg:mt-0'>
                     <div className='py-10 px-4 md:px-[75px] flex flex-col gap-3'>
                         <div className='flex flex-col md:flex-row shadow-sm gap-2 border border-[#F1F1F1] rounded-[12px] w-full p-[15px] items-center'>
                             <div className='h-full'>
