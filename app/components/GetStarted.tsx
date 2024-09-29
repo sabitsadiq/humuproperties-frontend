@@ -17,7 +17,7 @@ const GetStarted = ({ handleNextTab }: any) => {
                 </div>
                 <div className='bg-white rounded-lg shadow-md mt-4 lg:mt-0'>
                     <div className='py-10 px-4 md:px-[75px] flex flex-col gap-3'>
-                        <div className='flex flex-col md:flex-row shadow-sm gap-2 border border-[#F1F1F1] rounded-[12px] w-full p-[15px] items-center'>
+                        <div className='flex flex-col md:flex-row shadow-sm gap-2 border border-[#F1F1F1] rounded-[12px] w-full p-[15px] items-center md:items-start lg:items-center'>
                             <div className='h-full'>
                                 <Image src="/images/card.png" width={79} height={90} className="h-full" alt='card' />
 
@@ -27,7 +27,7 @@ const GetStarted = ({ handleNextTab }: any) => {
                                 <p className='text-[#141414] opacity-50 text-xl font-normal leading-[28.9px]'>Reach millions of guests - list on 30+ top booking sites with us. Take the pressure off and turn the income on.</p>
                             </div>
                         </div>
-                        <div className='flex flex-col md:flex-row shadow-sm gap-2 border border-[#F1F1F1] rounded-[12px] w-full p-[15px] items-center'>
+                        <div className='flex flex-col md:flex-row shadow-sm gap-2 border border-[#F1F1F1] rounded-[12px] w-full p-[15px] items-center md:items-start lg:items-center'>
                             <div className=''>
                                 <Image src="/images/card.png" width={79} height={79} className="" alt='card' />
                             </div>
@@ -36,7 +36,7 @@ const GetStarted = ({ handleNextTab }: any) => {
                                 <p className='text-[#141414] opacity-50 text-xl font-normal leading-[28.9px]'>Effortlessly manage all your properties and listings from one place. Save time and cut out admin.</p>
                             </div>
                         </div>
-                        <div className='flex gap-2 flex-col md:flex-row border shadow-sm border-[#F1F1F1] rounded-[12px] w-full p-[15px] items-center'>
+                        <div className='flex gap-2 flex-col md:flex-row border shadow-sm border-[#F1F1F1] rounded-[12px] w-full p-[15px] items-center md:items-start lg:items-center'>
                             <div className=''>
                                 <Image src="/images/card.png" width={79} height={79} className="" alt='card' />
 

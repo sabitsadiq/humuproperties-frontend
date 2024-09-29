@@ -43,6 +43,9 @@ const slicedImages = [
     }
 ];
 
+const colors = ['#FAFAFA', '#D1ECFF', '#FFFFFF'];
+
+
 const Carousel = () => {
     const carouselRef = useRef<any>(null);
     const [isDragging, setIsDragging] = useState(false);
@@ -75,7 +78,7 @@ const Carousel = () => {
         };
         let timeoutId = autoPlay();
 
-        // Cleanup on unmount
+        // Cleanup on unmounty
         return () => clearTimeout(timeoutId);
     }, [cardPerView]);
 
@@ -134,12 +137,16 @@ const Carousel = () => {
 
             </div>
             <div ref={carouselRef} className="carousel" onScroll={handleInfiniteScroll}>
-                {slicedImages.map((item: any) => {
+                {slicedImages.map((item: any, index) => {
                     const { id, name, image, text } = item;
+                    const colorIndex = index % colors.length; // Get color based on index
+                    const backgroundColor = colors[colorIndex];
+                    console.log(`bg-[${backgroundColor}]`)
+                    console.log("colorindex", colorIndex)
                     return (
 
                         <article
-                            className={`bg-[#FAFAFA] shadow-sm flex flex-col p-10 rounded-lg gap-2 items-center card`}
+                            className={`bg-[${backgroundColor}] shadow-sm flex flex-col p-10 rounded-lg gap-2 items-center card`}
                             key={id}
                         >
                             <Image src={image} className="person-img" width={70} height={70} alt="img" />

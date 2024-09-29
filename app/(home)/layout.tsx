@@ -1,6 +1,6 @@
 
 import type { Metadata } from "next";
-import { Jost } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "../globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -8,7 +8,10 @@ import { ReduxProvider } from "../redux/provider";
 // import { store } from "../redux/store"
 // import { Provider } from 'react-redux'
 
-const inter = Jost({ subsets: ["latin"] });
+const inter = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"], // Add the weights you need here
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,9 +27,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} relative `}>
         <ReduxProvider>
-          <Navbar />
+          {/* <Navbar /> */}
           {children}
-          <Footer />
+          {/* <Footer /> */}
         </ReduxProvider>
       </body>
     </html>
