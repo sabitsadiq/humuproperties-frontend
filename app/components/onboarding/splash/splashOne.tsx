@@ -4,7 +4,7 @@ import React from "react";
 const SplashOne = () => {
     return (
         <div className="flex flex-col w-full">
-            <div className="flex flex-col gap-4 mt-16">
+            <div className="flex flex-col gap-4 mt-14">
                 <div>
                     <h2 className="font-semibold text-center w-full text-xl leading-[30px]">
                         Crop <span className="text-[#6FA521]">Monitoring</span>{" "}

@@ -4,7 +4,7 @@ import React from "react";
 const SplashThree = () => {
     return (
         <div className="flex flex-col w-full">
-            <div className="flex flex-col gap-4 mt-[76px]">
+            <div className="flex flex-col gap-4 mt-14">
                 <div>
                     <h2 className="font-semibold text-center w-full text-xl leading-[30px]">
                         Market Access and Input Supply
