@@ -14,7 +14,7 @@ const Page = () => {
     };
     return (
         <div className='px-4 mt-10'>
-            <FaArrowLeftLong size={24} onClick={handleBack} />
+            <FaArrowLeftLong size={24} onClick={handleBack} className='' />
             <h2 className='font-semibold  w-full text-xl leading-[] mt-4'>Welcome Back!</h2>
             <p className='text-[#323232] font-normal text-xs leading-[18px]'>Kindly sign in to your account</p>
             <div className='mt-5'>
@@ -28,7 +28,7 @@ const Page = () => {
                         <input placeholder='Password' className='border border-[#E4E3E3] rounded-[10px] outline-none p-3 w-full placeholder:text-[#B6B6B6] placeholder:text-xs' />
                         <div className='flex items-center justify-between font-medium text-xs'>
                             <div className='flex items-center gap-2'>
-                                <input type='checkbox' className='rounded-md' />
+                                <input type='checkbox' id='rememberMe' className='custom-checkbox' />
                                 <p>Keep me signed in</p>
                             </div>
                             <Link className='text-[#6FA521] ' href="">Forgot Password?</Link>

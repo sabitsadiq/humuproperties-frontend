@@ -14,10 +14,10 @@ const Splash = () => {
         if (currentSplash < 2) {
             setCurrentSplash(prev => prev + 1);
         };
-        if (currentSplash === 2) router.push("/sigin")
+        if (currentSplash === 2) router.push("/signin")
     };
 
-    skip === true && router.push("/sigin");
+    skip === true && router.push("/signin");
 
     const progressBarWidth = (currentSplash + 1) * 33.33;
     return (
