@@ -3,15 +3,21 @@ import React, { useState } from 'react'
 import SplashOne from './splashOne'
 import SplashTwo from './splashTwo'
 import SplashThree from './splashThree'
+import { useRouter } from 'next/navigation'
 
 const Splash = () => {
-    const [currentSplash, setCurrentSplash] = useState(0); // Track the current splash (0 for SplashOne)
+    const router = useRouter()
+    const [currentSplash, setCurrentSplash] = useState(0);
+    const [skip, setSkip] = useState(false)
 
     const handleNext = () => {
         if (currentSplash < 2) {
-            setCurrentSplash(prev => prev + 1); // Move to the next splash screen
-        }
+            setCurrentSplash(prev => prev + 1);
+        };
+        if (currentSplash === 2) router.push("/sigin")
     };
+
+    skip === true && router.push("/sigin");
 
     const progressBarWidth = (currentSplash + 1) * 33.33;
     return (
@@ -29,9 +35,10 @@ const Splash = () => {
                     className='text-white text-center rounded-[10px] p-4 bg-[#6FA521] w-full'
                     onClick={handleNext}
                 >
-                    {currentSplash < 2 ? 'Next' : 'Finish'} {/* Change button text on the last screen */}
+                    {currentSplash < 2 ? 'Next' : 'Get Started'}
                 </button>
-                <p className='text-[#6FA521] text-center w-full p-4'>Skip</p>
+                {currentSplash < 2 && (<p className='text-[#6FA521] text-center w-full p-4' onClick={() => setSkip(true)}>Skip</p>)}
+
             </div>
         </div>
     )
